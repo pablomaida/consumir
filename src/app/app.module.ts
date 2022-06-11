@@ -1,16 +1,53 @@
+import { RouterModule, Routes } from '@angular/router';//importamos pa el routing
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 
+import{HttpClientModule}from '@angular/common/http';
+import{NoticiasService}from './services/noticias.service';//importamos el servicios que creamos
+//importamos los componentes para los routinglinks
+import { NavComponent } from './nav/nav.component';
+import { CardsComponent } from './cards/cards.component';
+import { FooterComponent } from './footer/footer.component';
+import { EspeComponent } from './espe/espe.component';
+import { FaComponent } from './fa/fa.component';
+import { DeporteComponent } from './deporte/deporte.component';
+import { ArtesComponent } from './artes/artes.component';
+import { FiltradoPipe } from './filtrado.pipe';
+
+
+
+
+
+//constante routes que tiene a las rutas(routinglinks) y los componentes que van a cunsumir
+const routes: Routes = [
+  //los routinglinks con sus componentes respectivos
+  { path: 'tecnologia', component: CardsComponent },
+  { path: 'espectaculo', component: EspeComponent },
+  { path: 'farandula', component: FaComponent },
+  { path: 'deportes', component: DeporteComponent },
+  { path: 'artes', component: ArtesComponent }
+  ];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardsComponent,
+    FooterComponent,
+    EspeComponent,
+    FaComponent,
+    DeporteComponent,
+    ArtesComponent,
+    NavComponent,
+    FiltradoPipe 
   ],
+  //dentro del import metemos el metodo httpclientmodule
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule,
+    RouterModule.forRoot(routes)  //importamos tambien esto para el routing
+           
   ],
-  providers: [],
+  providers: [NoticiasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
