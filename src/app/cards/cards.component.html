@@ -1,7 +1,7 @@
 
 <div class="body-news">
 <div class="container">
-    <div *ngFor="let i of tecno ">
+    <div *ngFor="let i of tecno | filtrado:filtropost "> <!--cambiar a resultPost por tecno ya que contiene el array con resultado-->
         <div class="body-news">
             <div class="container">
                 <div class="box">
