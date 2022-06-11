@@ -11,7 +11,7 @@ export class CardsComponent implements OnInit {
   constructor(private _service:NoticiasService) { }
   //array que contiene el resultado de la api
   tecno:any=[];
-  //array con resultados limitados
+  //array con resultados limitadosssssssssssssssssss
   
 
   ngOnInit(): void {
