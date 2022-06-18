@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../services/noticias.service';
 
 @Component({
   selector: 'app-fa',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaComponent implements OnInit {
 
-  constructor() { }
+ /*se vuelve a inyecta en el constructor*/
+ constructor(private _service:NoticiasService) { }
+ negocios:any=[];/*crea de nuevo el array que contendra al resultado de la api*/
 
-  ngOnInit(): void {
-  }
+ filtropost=this.negocios
+ 
+ ngOnInit(): void {
+   //con subscribe obtiene el resultado de la api
+   this._service.negocios().subscribe((result)=>{
+     console.log(result);
+     this.negocios=result.articles;//mete dentro del array y metra en la pagina
+   })
+ }
 
 }

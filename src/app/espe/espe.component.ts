@@ -10,8 +10,9 @@ export class EspeComponent implements OnInit {
 /*se vuelve a inyecta en el constructor*/
   constructor(private _service:NoticiasService) { }
   especta:any=[];/*crea de nuevo el array que contendra al resultado de la api*/
-  
 
+  filtropost=this.especta
+  
   ngOnInit(): void {
     //con subscribe obtiene el resultado de la api
     this._service.especta().subscribe((result)=>{

@@ -11,9 +11,9 @@ import { NavComponent } from './nav/nav.component';
 import { CardsComponent } from './cards/cards.component';
 import { FooterComponent } from './footer/footer.component';
 import { EspeComponent } from './espe/espe.component';
-import { FaComponent } from './fa/fa.component';
+import { FaComponent } from './fa/fa.component';//componente negocios cambie XD
 import { DeporteComponent } from './deporte/deporte.component';
-import { ArtesComponent } from './artes/artes.component';
+import { ArtesComponent } from './artes/artes.component';//componenete salud
 import { FiltradoPipe } from './filtrado.pipe';
 
 
@@ -25,9 +25,9 @@ const routes: Routes = [
   //los routinglinks con sus componentes respectivos
   { path: 'tecnologia', component: CardsComponent },
   { path: 'espectaculo', component: EspeComponent },
-  { path: 'farandula', component: FaComponent },
+  { path: 'negocios', component: FaComponent },
   { path: 'deportes', component: DeporteComponent },
-  { path: 'artes', component: ArtesComponent }
+  { path: 'salud', component: ArtesComponent }
   ];
 @NgModule({
   declarations: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NoticiasService } from '../services/noticias.service';
 
 @Component({
   selector: 'app-artes',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtesComponent implements OnInit {
 
-  constructor() { }
+  salud:any=[];
+
+  filtropost=this.salud;
+
+  constructor(private _service:NoticiasService) { }
 
   ngOnInit(): void {
+    this._service.salud().subscribe((result)=>{
+      console.log(result);
+      this.salud=result.articles;//mete dentro del array y muestra en la pagina
+    })
   }
 
 }

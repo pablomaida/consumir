@@ -17,10 +17,10 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
 
     //llamamos y concatenamos metodos service-navegation con suscribite 
-    // y muestra en consola el array de la api
+    // y muestra en consola y en la web el array de la api 
     this._service.tecno().subscribe((result)=>{
       console.log(result);
-      this.tecno=result.articles;//mete dentro del array y metra en la pagina
+      this.tecno=result.articles;//mete dentro del array y muestra en la pagina
     })
   }
 
