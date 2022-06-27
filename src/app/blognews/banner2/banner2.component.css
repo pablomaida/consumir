@@ -1,0 +1,25 @@
+.cars-banners{
+    width: 90%;
+    height: 504px;
+    background-image: url(../../../assets/u.jpg);
+    
+    margin:auto;
+}
+
+.cars-banners .containes{
+    width: 40%;
+    padding: 90px ;
+    color: black;
+}
+
+/*resposive*/
+@media(max-width: 768px){
+    .cars-banners{
+        width: 90%;     
+        background-size: contain;  
+        background-repeat: no-repeat;
+        height: 200px;
+
+    }
+}
+
