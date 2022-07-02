@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{NoticiasService} from '../services/noticias.service';
+import { NoticiasService } from '../services/noticias.service';
 
 @Component({
   selector: 'app-espe',

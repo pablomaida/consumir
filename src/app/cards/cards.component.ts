@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{NoticiasService} from '../services/noticias.service';//importamos el servicio creado
+import { NoticiasService } from '../services/noticias.service';//importamos el servicio creado
 
 @Component({
   selector: 'app-cards',
